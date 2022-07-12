@@ -8,6 +8,7 @@ import { realTimeDb, storage } from "../firebase";
 import { v4 as uuidv4 } from "uuid";
 import { ImFilePicture } from 'react-icons/im'
 
+
 function InputBox() {
   // uploaded image to state
   const [imageToPost, setImageToPost] = useState(null);
@@ -18,7 +19,7 @@ function InputBox() {
 
   // get shared data from context.
   const { user, setIsLoading, wallPosts, setWallPosts } = useContext(Context);
-
+  
   const updateWallPosts = (post) => {
     if (post) {
       const updatedwallPosts = [...wallPosts, post];
@@ -27,8 +28,7 @@ function InputBox() {
       }));
     }
   }
-
-
+  
   // send post to Firebase {e} and return
 
   const sendPost = async (e) => {

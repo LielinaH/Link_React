@@ -17,6 +17,7 @@ function Posts() {
           timestamp={post.timestamp}
           imageUrl={post.imageUrl}
           userAvatar={post.userAvatar}
+          postUuid={post.id}
         />
       ))}
     </div>
